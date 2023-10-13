@@ -1,0 +1,212 @@
+{
+    "": {
+        "Move Focus To Left": {
+            "keybind": "[MOD] + h",
+            "command": "left "
+        },
+        "Move Focus To Right": {
+            "keybind": "[MOD] + l",
+            "command": "right "
+        },
+        "Move Focus Down": {
+            "keybind": "[MOD] + j",
+            "command": "down "
+        },
+        "Move Focus Up": {
+            "keybind": "[MOD] + k",
+            "command": "up "
+        },
+        "Move Window Focus To Other Window": {
+            "keybind": "[MOD] + Space",
+            "command": "next "
+        },
+        "Move Window To The Left": {
+            "keybind": "[MOD] + [CTRL] + h",
+            "command": "shuffle_left "
+        },
+        "Move Window To The Right": {
+            "keybind": "[MOD] + [CTRL] + l",
+            "command": "shuffle_right "
+        },
+        "Move Window Down": {
+            "keybind": "[MOD] + [CTRL] + j",
+            "command": "shuffle_down "
+        },
+        "Move Window Up": {
+            "keybind": "[MOD] + [CTRL] + k",
+            "command": "shuffle_up "
+        },
+        "Grow Window To The Left": {
+            "keybind": "[MOD] + [SHIFT] + h",
+            "command": "grow_left "
+        },
+        "Grow Window To The Right": {
+            "keybind": "[MOD] + [SHIFT] + l",
+            "command": "grow_right "
+        },
+        "Grow Window Down": {
+            "keybind": "[MOD] + [SHIFT] + j",
+            "command": "grow_down "
+        },
+        "Grow Window Up": {
+            "keybind": "[MOD] + [SHIFT] + k",
+            "command": "grow_up "
+        },
+        "Reset All Window Sizes": {
+            "keybind": "[MOD] + n",
+            "command": "normalize "
+        },
+        "": {
+            "keybind": "[CTRL] + 2",
+            "command": "dropdown_toggle 'colorpick'"
+        },
+        "Toggle Between Split And Unsplit Sides Of Stack": {
+            "keybind": "[MOD] + [SHIFT] + Return",
+            "command": "toggle_split "
+        },
+        "Launch Terminal": {
+            "keybind": "[MOD] + Return",
+            "command": "spawn 'alacritty'"
+        },
+        "Toggle Previous Layout": {
+            "keybind": "[MOD] + [SHIFT] + Tab",
+            "command": "prev_layout "
+        },
+        "Toggle Next Layout": {
+            "keybind": "[MOD] + Tab",
+            "command": "next_layout "
+        },
+        "Kill Focused Window": {
+            "keybind": "[MOD] + q",
+            "command": "kill "
+        },
+        "Reload The Config": {
+            "keybind": "[MOD] + [CTRL] + r",
+            "command": "reload_config "
+        },
+        "Shutdown Qtile": {
+            "keybind": "[MOD] + [CTRL] + q",
+            "command": "shutdown "
+        },
+        "Spawn A Command Using A Prompt Widget": {
+            "keybind": "[MOD] + r",
+            "command": "spawn 'rofi -show drun'"
+        },
+        "Show All Currently Open Windows": {
+            "keybind": "[MOD] + w",
+            "command": "spawn 'rofi -show window'"
+        },
+        "Powermenu": {
+            "keybind": "[MOD] + p",
+            "command": "spawn 'sh -c ~/.config/rofi/scripts/power'"
+        },
+        "Theme_Switcher": {
+            "keybind": "[MOD] + t",
+            "command": "spawn 'sh -c ~/.config/rofi/scripts/themes'"
+        },
+        "File Manager": {
+            "keybind": "[MOD] + e",
+            "command": "spawn 'thunar'"
+        },
+        "Clipboard": {
+            "keybind": "[MOD] + h",
+            "command": "spawn 'roficlip'"
+        },
+        "Screenshot": {
+            "keybind": "[MOD] + s",
+            "command": "spawn 'flameshot gui'"
+        },
+        "Launch Volume Mixer Scratchpad": {
+            "keybind": "[CTRL] + 1",
+            "command": "dropdown_toggle 'mixer'"
+        },
+        "Switch To Group 1": {
+            "keybind": "[MOD] + 1",
+            "command": "toscreen "
+        },
+        "Switch To & Move Focused Window To Group 1": {
+            "keybind": "[MOD] + [SHIFT] + 1",
+            "command": "togroup '1', switch_group = True"
+        },
+        "Switch To Group 2": {
+            "keybind": "[MOD] + 2",
+            "command": "toscreen "
+        },
+        "Switch To & Move Focused Window To Group 2": {
+            "keybind": "[MOD] + [SHIFT] + 2",
+            "command": "togroup '2', switch_group = True"
+        },
+        "Switch To Group 3": {
+            "keybind": "[MOD] + 3",
+            "command": "toscreen "
+        },
+        "Switch To & Move Focused Window To Group 3": {
+            "keybind": "[MOD] + [SHIFT] + 3",
+            "command": "togroup '3', switch_group = True"
+        },
+        "Switch To Group 4": {
+            "keybind": "[MOD] + 4",
+            "command": "toscreen "
+        },
+        "Switch To & Move Focused Window To Group 4": {
+            "keybind": "[MOD] + [SHIFT] + 4",
+            "command": "togroup '4', switch_group = True"
+        },
+        "Switch To Group 5": {
+            "keybind": "[MOD] + 5",
+            "command": "toscreen "
+        },
+        "Switch To & Move Focused Window To Group 5": {
+            "keybind": "[MOD] + [SHIFT] + 5",
+            "command": "togroup '5', switch_group = True"
+        },
+        "Switch To Group 6": {
+            "keybind": "[MOD] + 6",
+            "command": "toscreen "
+        },
+        "Switch To & Move Focused Window To Group 6": {
+            "keybind": "[MOD] + [SHIFT] + 6",
+            "command": "togroup '6', switch_group = True"
+        },
+        "Switch To Group 7": {
+            "keybind": "[MOD] + 7",
+            "command": "toscreen "
+        },
+        "Switch To & Move Focused Window To Group 7": {
+            "keybind": "[MOD] + [SHIFT] + 7",
+            "command": "togroup '7', switch_group = True"
+        },
+        "Switch To Group 8": {
+            "keybind": "[MOD] + 8",
+            "command": "toscreen "
+        },
+        "Switch To & Move Focused Window To Group 8": {
+            "keybind": "[MOD] + [SHIFT] + 8",
+            "command": "togroup '8', switch_group = True"
+        },
+        "Switch To Group 9": {
+            "keybind": "[MOD] + 9",
+            "command": "toscreen "
+        },
+        "Switch To & Move Focused Window To Group 9": {
+            "keybind": "[MOD] + [SHIFT] + 9",
+            "command": "togroup '9', switch_group = True"
+        },
+        "Switch To Group 0": {
+            "keybind": "[MOD] + 0",
+            "command": "toscreen "
+        },
+        "Switch To & Move Focused Window To Group 0": {
+            "keybind": "[MOD] + [SHIFT] + 0",
+            "command": "togroup '0', switch_group = True"
+        },
+        "Switch To Group 10": {
+            "keybind": "[MOD] + [CTRL] + 0",
+            "command": "toscreen "
+        },
+        "Switch To & Move Focused Window To Group 10": {
+            "keybind": "[MOD] + [CTRL] + [SHIFT] + 0",
+            "command": "togroup '10', switch_group = True"
+        }
+    }
+}

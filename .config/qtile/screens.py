@@ -2,18 +2,19 @@ from libqtile import bar, layout, widget, hook, qtile
 from libqtile.config import Click, Drag, Group, Key, Match, hook, Screen, KeyChord
 from libqtile.lazy import lazy
 
+strings_to_exclude = [" - Chromium", " — Mozilla Firefox", " - Code - OSS", "- Mozilla Thunderbird", " - Thunar", "- Discord"]
+
 
 def search():
     qtile.cmd_spawn("rofi -show drun")
-
 
 def power():
     qtile.cmd_spawn("sh -c ~/.config/rofi/scripts/power")
 
 def remove_excess_letters(text): 
-    for string in [" - Chromium", "Mozilla Firefox"]: 
+    for string in strings_to_exclude: 
         text = text.replace(string, "") 
-        return text
+    return text
 
 def no_text(text):
 	return ""
@@ -36,7 +37,7 @@ screens = [
                     filename="~/.config/qtile/Assets/6.png",
                 ),
                 widget.GroupBox(
-                    fontsize=24,
+                    fontsize=16,
                     borderwidth=3,
                     highlight_method="block",
                     active="#607767",
@@ -71,26 +72,35 @@ screens = [
                     fontsize=13,
                     # mouse_callbacks={"Button1": lazy.next_layout(), "Button3": lazy.prev_layout()}
                 ),
-                widget.Image(
-                    filename="~/.config/qtile/Assets/5.png",
+                widget.Spacer(
+                    length=8,
+                    background="#202222",
                 ),
                 widget.Image(
-                    filename="~/.config/qtile/Assets/search.png",
-                    margin=2,
-                    background="#0F1212",
-                    mouse_callbacks={"Button1": search},
+                    filename="~/.config/qtile/Assets/1.png",
                 ),
-                widget.TextBox(
-                    fmt="Search",
-                    background="#0F1212",
-                    font="JetBrains Mono Bold",
-                    fontsize=13,
-                    foreground="#607767",
-                    mouse_callbacks={"Button1": search},
-                ),
-                widget.Image(
-                    filename="~/.config/qtile/Assets/4.png",
-                ),
+
+                # widget.Image(
+                #     filename="~/.config/qtile/Assets/5.png",
+                # ),
+                # widget.Image(
+                #     filename="~/.config/qtile/Assets/search.png",
+                #     margin=2,
+                #     background="#0F1212",
+                #     mouse_callbacks={"Button1": search},
+                # ),
+                # widget.TextBox(
+                #     fmt="Search",
+                #     background="#0F1212",
+                #     font="JetBrains Mono Bold",
+                #     fontsize=13,
+                #     foreground="#607767",
+                #     mouse_callbacks={"Button1": search},
+                # ),
+                # widget.Image(
+                #     filename="~/.config/qtile/Assets/4.png",
+                # ),
+
                 # widget.WindowName(
                 #     background = '#202222',
                 #     format = "{name}",
@@ -99,16 +109,23 @@ screens = [
                 #     foreground='#607767',
                 #     empty_group_string = 'Desktop',
                 # ),
+                # widget.WindowTabs(
+                #     background="#202222",
+                #     font="JetBrains Mono Bold",
+                #     fontsize=14,
+                #     foreground="#607767",
+                # ),
                 widget.TaskList(
                     background="#202222",
                     font="JetBrains Mono Bold",
                     fontsize=14,
                     foreground="#607767",
                     max_title_width=0, # bilo je 200
-                    icon_size=20,
+                    icon_size=None,
                     padding_y=6,
-                    # parse_text=remove_excess_letters
-		            parse_text=no_text
+                    theme_mode="preferred",
+                    parse_text=remove_excess_letters
+		            # parse_text=no_text
                 ),
                 widget.Image(
                     filename="~/.config/qtile/Assets/3.png",
@@ -207,10 +224,14 @@ screens = [
                     font="JetBrains Mono Bold",
                     fontsize=13,
                     update_interval=5,
+                    mouse_callbacks={
+                        "Button1": lazy.group["scratchpad"].dropdown_toggle("task_manager")
+                    },
                 ),
                 # widget.Image(
                 # filename='~/.config/qtile/Assets/Drop2.png',
                 # ),
+
                 widget.Image(
                     filename="~/.config/qtile/Assets/2.png",
                 ),
@@ -218,21 +239,22 @@ screens = [
                     length=8,
                     background="#202222",
                 ),
-                widget.BatteryIcon(
-                    theme_path="~/.config/qtile/Assets/Battery/",
-                    background="#202222",
-                    scale=1,
-                ),
-                widget.Battery(
-                    font="JetBrains Mono Bold",
-                    fontsize=13,
-                    background="#202222",
-                    foreground="#607767",
-                    format="{percent:2.0%}",
-                ),
-                widget.Image(
-                    filename="~/.config/qtile/Assets/2.png",
-                ),
+                # widget.BatteryIcon(
+                #     theme_path="~/.config/qtile/Assets/Battery/",
+                #     background="#202222",
+                #     scale=1,
+                # ),
+                # widget.Battery(
+                #     font="JetBrains Mono Bold",
+                #     fontsize=13,
+                #     background="#202222",
+                #     foreground="#607767",
+                #     format="{percent:2.0%}",
+                # ),
+                # widget.Image(
+                #     filename="~/.config/qtile/Assets/2.png",
+                # ),
+
                 widget.Spacer(
                     length=8,
                     background="#202222",
@@ -269,6 +291,9 @@ screens = [
                     theme_path="~/.config/qtile/Assets/Volume/",
                     emoji=True,
                     background="#202222",
+                    mouse_callbacks={
+                        "Button3": lazy.group["scratchpad"].dropdown_toggle("mixer")
+                    },
                 ),
                 widget.Spacer(
                     length=-5,
@@ -279,6 +304,9 @@ screens = [
                     fontsize=13,
                     background="#202222",
                     foreground="#607767",
+                    mouse_callbacks={
+                        "Button3": lazy.group["scratchpad"].dropdown_toggle("mixer")
+                    },
                 ),
                 widget.Image(
                     filename="~/.config/qtile/Assets/5.png",

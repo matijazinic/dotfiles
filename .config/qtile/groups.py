@@ -11,7 +11,7 @@ from scratchpads import scratchpad_groups
 groups = [
     Group("1", label="󰏃", matches=[Match(wm_class=["firefox"])]),
     Group("2", label="󰏃", matches=[Match(wm_class=["code-oss"])]),
-    Group("3", label="󰏃", matches=[Match(wm_class=["Alacritty"])]),
+    Group("3", label="󰏃", layout="columns", matches=[Match(wm_class=["Alacritty"])]),
     Group("4", label="󰏃"),
     Group("5", label="󰏃", matches=[Match(wm_class=["thunderbird"])]),
     Group("6", label="󰏃", matches=[Match(wm_class=["thunar"])]),

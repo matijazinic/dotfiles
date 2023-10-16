@@ -5,6 +5,7 @@ autorandr -c &
 
 # Start GNOME authentication agent
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+/usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 
 # Start picom
 picom --config ~/.config/picom/picom.conf &
@@ -24,6 +25,7 @@ blueman-applet & # Bluetooth manager
 redshift &
 
 # Start often used apps
+firefox &
 alacritty &
 spotify &
 discord &

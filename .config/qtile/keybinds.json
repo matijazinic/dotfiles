@@ -16,9 +16,9 @@
             "keybind": "[MOD] + k",
             "command": "up "
         },
-        "Move Window Focus To Other Window": {
+        "Change Keyboard Layout": {
             "keybind": "[MOD] + Space",
-            "command": "next "
+            "command": "next_keyboard "
         },
         "Move Window To The Left": {
             "keybind": "[MOD] + [CTRL] + h",

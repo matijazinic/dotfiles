@@ -14,8 +14,8 @@ zstyle ':z4h:' auto-update-days '28'
 zstyle ':z4h:bindkey' keyboard  'pc'
 
 # Start tmux if not already in tmux.
-# zstyle ':z4h:' start-tmux no
-zstyle ':z4h:' start-tmux command tmux -u new -A -D -t z4h
+zstyle ':z4h:' start-tmux no
+# zstyle ':z4h:' start-tmux command tmux -u new -A -D -t z4h
 
 # Whether to move prompt to the bottom when zsh starts and on Ctrl+L.
 zstyle ':z4h:' prompt-at-bottom 'no'
@@ -70,6 +70,7 @@ export EDITOR=code-oss
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
 z4h source ~/.aliases
+z4h source /usr/share/nvm/init-nvm.sh
 
 # Use additional Git repositories pulled in with `z4h install`.
 #

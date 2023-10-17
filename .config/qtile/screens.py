@@ -29,6 +29,7 @@ print(display_widgets)
 screens = [
     Screen(
         top=bar.Bar(
+<<<<<<< Updated upstream
             [
                 widget.Spacer(
                     length=10,
@@ -389,6 +390,9 @@ screens = [
                     background="#202222",
                 ),
             ],
+=======
+            display_widgets,
+>>>>>>> Stashed changes
             36,
             border_color="#0F1212",
             background="#00000000",

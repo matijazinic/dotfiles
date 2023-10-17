@@ -23,8 +23,10 @@ syncthing &
 nm-applet & # Network manager
 blueman-applet & # Bluetooth manager
 redshift &
+clipit &
 
 # Start often used apps
+wireguird &
 firefox &
 alacritty &
 spotify &

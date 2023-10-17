@@ -98,7 +98,7 @@
         },
         "Powermenu": {
             "keybind": "[MOD] + p",
-            "command": "spawn 'sh -c ~/.config/rofi/scripts/power'"
+            "command": "spawn 'sh -c ~/.config/rofi/scripts/powermenu'"
         },
         "Theme_Switcher": {
             "keybind": "[MOD] + t",

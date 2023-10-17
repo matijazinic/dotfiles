@@ -1,5 +1,6 @@
 from libqtile import layout
 from libqtile.config import Match
+from colors import colors
 
 # L A Y O U T S
 
@@ -8,11 +9,11 @@ layouts = [
         border_focus="#1F1D2E",
         border_normal="#1F1D2E",
         margin=10,
-	    # margin=[0,0,0,0],
+        # margin=[0,0,0,0],
         border_width=0,
     ),
     layout.Columns(
-        margin=10, border_focus="#1F1D2E", border_normal="#1F1D2E", border_width=0
+        margin=10, border_focus=colors[2], border_normal=colors[0], border_width=1
     ),
     layout.Floating(
         border_focus="#1F1D2E",

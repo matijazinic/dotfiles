@@ -28,7 +28,7 @@ scratchpad_groups = [
                 terminal + " -t htop -e htop",
                 x=0.595,
                 width=0.4,
-                height=0.6,
+                height=0.9,
                 opacity=1,
             ),
             DropDown(

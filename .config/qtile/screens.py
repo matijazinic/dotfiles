@@ -20,11 +20,8 @@ display_widgets = []
 if hostname == "matija-legion5pro":
     display_widgets = default_widgets
 else:
-    del default_widgets[26:28]
+    del default_widgets[33:37]
     display_widgets = default_widgets
-
-print(display_widgets)
-
 
 screens = [
     Screen(
@@ -32,7 +29,7 @@ screens = [
             display_widgets,
             36,
             border_color="#0F1212",
-            background="#00000000",
+            # background="#00000000",
             border_width=[0, 0, 0, 0],
             # margin = [15,60,6,60],
             margin=[10, 10, 6, 10],

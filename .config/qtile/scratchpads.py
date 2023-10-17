@@ -2,6 +2,15 @@ from libqtile.config import ScratchPad, DropDown, Key
 from libqtile.lazy import lazy
 from defaults import terminal
 
+# Notes file modification
+from datetime import date
+current_date = str(date.today())
+
+editor = "nano"
+location = "/home/matija/"
+file_name = "notes" + "-" + current_date
+file_extension = ".md"
+
 scratchpad_groups = [
     ScratchPad(
         "scratchpad",
@@ -23,6 +32,14 @@ scratchpad_groups = [
                 opacity=1,
             ),
             DropDown(
+                "notes",
+                terminal + " -e " + editor + " " + location + " " + file_name + file_extension,
+                x=0.595,
+                width=0.4,
+                height=0.6,
+                opacity=0.8,
+            ),
+            DropDown(
                 "mixer",
                 "pavucontrol",
                 x=0.695,
@@ -34,16 +51,16 @@ scratchpad_groups = [
             DropDown(
                 "colorpick", "gpick", x=0.4, y=0.1, width=0.4, height=0.6, opacity=1, on_focus_lost_hide=False
             ),
+            DropDown(
+                "notifications", terminal + " -t notifications -e notification_history", x=0.4, y=0.1, width=0.4, height=0.6, opacity=1
+            ),
         ],
     ),
 ]
 
 scratchpad_keys = [
-    Key(
-        ["control"],
-        "1",
-        lazy.group["scratchpad"].dropdown_toggle("mixer"),
-        desc="Launch volume mixer scratchpad",
+    Key(["control"], "1", lazy.group["scratchpad"].dropdown_toggle("notes"), desc="Launch notes",
     ),
     Key(["control"], "2", lazy.group["scratchpad"].dropdown_toggle("colorpick")),
+    Key(["control"], "3", lazy.group["scratchpad"].dropdown_toggle("notifications")),
 ]

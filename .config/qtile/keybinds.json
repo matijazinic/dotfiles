@@ -57,8 +57,8 @@
             "command": "normalize "
         },
         "": {
-            "keybind": "[CTRL] + 2",
-            "command": "dropdown_toggle 'colorpick'"
+            "keybind": "[CTRL] + 3",
+            "command": "dropdown_toggle 'notifications'"
         },
         "Toggle Between Split And Unsplit Sides Of Stack": {
             "keybind": "[MOD] + [SHIFT] + Return",
@@ -116,9 +116,9 @@
             "keybind": "[MOD] + s",
             "command": "spawn 'flameshot gui'"
         },
-        "Launch Volume Mixer Scratchpad": {
+        "Launch Notes": {
             "keybind": "[CTRL] + 1",
-            "command": "dropdown_toggle 'mixer'"
+            "command": "dropdown_toggle 'notes'"
         },
         "Switch To Group 1": {
             "keybind": "[MOD] + 1",

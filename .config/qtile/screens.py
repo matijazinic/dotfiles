@@ -24,14 +24,14 @@ screens = [
         top=bar.Bar(
             [
                 widget.Spacer(
-                    length=15,
+                    length=10,
                     background="#0F1212",
                 ),
                 widget.Image(
-                    filename="~/.config/qtile/Assets/launch_Icon.png",
-                    margin=2,
+                    filename="~/.config/qtile/Assets/Misc/arch_linux.png",
+                    margin=6,
                     background="#0F1212",
-                    mouse_callbacks={"Button1": power},
+                    mouse_callbacks={"Button1": search},
                 ),
                 widget.Image(
                     filename="~/.config/qtile/Assets/6.png",
@@ -54,10 +54,10 @@ screens = [
                     rounded=True,
                     disable_drag=True,
                 ),
-                widget.Spacer(
-                    length=8,
-                    background="#202222",
-                ),
+                # widget.Spacer(
+                #     length=4,
+                #     background="#202222",
+                # ),
                 widget.Image(
                     filename="~/.config/qtile/Assets/1.png",
                 ),
@@ -72,10 +72,10 @@ screens = [
                     fontsize=13,
                     # mouse_callbacks={"Button1": lazy.next_layout(), "Button3": lazy.prev_layout()}
                 ),
-                widget.Spacer(
-                    length=8,
-                    background="#202222",
-                ),
+                # widget.Spacer(
+                #     length=4,
+                #     background="#202222",
+                # ),
                 widget.Image(
                     filename="~/.config/qtile/Assets/1.png",
                 ),
@@ -180,11 +180,38 @@ screens = [
                 #     font="JetBrains Mono Bold",
                 #     prefix="k",
                 # ),
+                widget.Image(
+                    filename="~/.config/qtile/Assets/2.png",
+                ),
+                widget.Image(
+                    filename="~/.config/qtile/Assets/Misc/note.png",
+                    background="#202222",
+                    scale=True,
+                    margin=8,
+                    mouse_callbacks={
+                        "Button1": lazy.group["scratchpad"].dropdown_toggle("notes")
+                    },
+                ),
                 # widget.Image(
-                #     filename="~/.config/qtile/Assets/2.png",
+                #     filename="~/.config/qtile/Assets/Misc/clipboard.png",
+                #     background="#202222",
+                #     scale=True,
+                #     margin=8,
+                #     mouse_callbacks={
+                #         "Button1": lazy.group["scratchpad"].dropdown_toggle("notes")
+                #     },
+                # ),
+                # widget.Image(
+                #     filename="~/.config/qtile/Assets/Misc/notification.png",
+                #     background="#202222",
+                #     scale=True,
+                #     margin=8,
+                #     mouse_callbacks={
+                #         "Button1": lazy.group["scratchpad"].dropdown_toggle("notifications")
+                #     },
                 # ),
                 # widget.Spacer(
-                #     length=8,
+                #     length=4,
                 #     background="#202222",
                 # ),
                 # widget.Net(
@@ -203,12 +230,12 @@ screens = [
                 #     colour_no_updates="#607767",
                 # ),
                 widget.Image(
-                    filename="~/.config/qtile/Assets/2.png",
+                    filename="~/.config/qtile/Assets/2-alt.png",
                 ),
-                widget.Spacer(
-                    length=8,
-                    background="#202222",
-                ),
+                # widget.Spacer(
+                #     length=4,
+                #     background="#202222",
+                # ),
                 widget.Image(
                     filename="~/.config/qtile/Assets/Misc/ram.png",
                     background="#202222",
@@ -235,10 +262,10 @@ screens = [
                 widget.Image(
                     filename="~/.config/qtile/Assets/2.png",
                 ),
-                widget.Spacer(
-                    length=8,
-                    background="#202222",
-                ),
+                # widget.Spacer(
+                #     length=4,
+                #     background="#202222",
+                # ),
                 # widget.BatteryIcon(
                 #     theme_path="~/.config/qtile/Assets/Battery/",
                 #     background="#202222",
@@ -256,7 +283,7 @@ screens = [
                 # ),
 
                 widget.Spacer(
-                    length=8,
+                    length=4,
                     background="#202222",
                 ),
                 # widget.Battery(format=' {percent:2.0%}',
@@ -281,10 +308,10 @@ screens = [
                 widget.Image(
                     filename="~/.config/qtile/Assets/2.png",
                 ),
-                widget.Spacer(
-                    length=8,
-                    background="#202222",
-                ),
+                # widget.Spacer(
+                #     length=4,
+                #     background="#202222",
+                # ),
                 widget.Volume(
                     font="JetBrains Mono Bold",
                     fontsize=13,
@@ -328,9 +355,19 @@ screens = [
                         "Button1": lazy.group["scratchpad"].dropdown_toggle("khal")
                     },
                 ),
+               
+                widget.Image(
+                    filename="~/.config/qtile/Assets/4-alt.png",
+                ),
+                widget.Image(
+                    filename="~/.config/qtile/Assets/Misc/poweroff.png",
+                    margin=8,
+                    background="#202222",
+                    mouse_callbacks={"Button1": power},
+                ),
                 widget.Spacer(
-                    length=18,
-                    background="#0F1212",
+                    length=8,
+                    background="#202222",
                 ),
             ],
             36,
@@ -360,7 +397,7 @@ screens = [
                     filename="~/.config/qtile/Assets/6.png",
                 ),
                 widget.GroupBox(
-                    fontsize=24,
+                    fontsize=16,
                     borderwidth=3,
                     highlight_method="block",
                     active="#607767",
@@ -377,10 +414,10 @@ screens = [
                     rounded=True,
                     disable_drag=True,
                 ),
-                widget.Spacer(
-                    length=8,
-                    background="#202222",
-                ),
+                # widget.Spacer(
+                #     length=4,
+                #     background="#202222",
+                # ),
                 widget.Image(
                     filename="~/.config/qtile/Assets/1.png",
                 ),
@@ -460,10 +497,10 @@ screens = [
                 widget.Image(
                     filename="~/.config/qtile/Assets/2.png",
                 ),
-                widget.Spacer(
-                    length=8,
-                    background="#202222",
-                ),
+                # widget.Spacer(
+                #     length=4,
+                #     background="#202222",
+                # ),
                 widget.Image(
                     filename="~/.config/qtile/Assets/Misc/ram.png",
                     background="#202222",
@@ -486,10 +523,10 @@ screens = [
                 widget.Image(
                     filename="~/.config/qtile/Assets/2.png",
                 ),
-                widget.Spacer(
-                    length=8,
-                    background="#202222",
-                ),
+                # widget.Spacer(
+                #     length=4,
+                #     background="#202222",
+                # ),
                 widget.BatteryIcon(
                     theme_path="~/.config/qtile/Assets/Battery/",
                     background="#202222",
@@ -505,10 +542,10 @@ screens = [
                 widget.Image(
                     filename="~/.config/qtile/Assets/2.png",
                 ),
-                widget.Spacer(
-                    length=8,
-                    background="#202222",
-                ),
+                # widget.Spacer(
+                #     length=4,
+                #     background="#202222",
+                # ),
                 # widget.Battery(format=' {percent:2.0%}',
                 # font="JetBrains Mono ExtraBold",
                 # fontsize=12,
@@ -555,6 +592,7 @@ screens = [
                     font="JetBrains Mono Bold",
                     fontsize=13,
                 ),
+                
                 widget.Spacer(
                     length=18,
                     background="#0F1212",

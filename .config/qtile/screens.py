@@ -79,10 +79,10 @@ screens = [
                 #     length=4,
                 #     background="#202222",
                 # ),
-                widget.Spacer(
-                    length=20,
-                    background="#00000000",
-                ),
+                # widget.Spacer(
+                #     length=20,
+                #     background="#00000000",
+                # ),
                 widget.Image(
                     filename="~/.config/qtile/Assets/layout.png", background=colors[0]
                 ),
@@ -94,10 +94,10 @@ screens = [
                     fontsize=13,
                     # mouse_callbacks={"Button1": lazy.next_layout(), "Button3": lazy.prev_layout()}
                 ),
-                widget.Spacer(
-                    length=20,
-                    background="#00000000",
-                ),
+                # widget.Spacer(
+                #     length=20,
+                #     background="#00000000",
+                # ),
                 # widget.Spacer(
                 #     length=4,
                 #     background="#202222",

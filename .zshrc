@@ -70,7 +70,6 @@ export EDITOR=code-oss
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
 z4h source ~/.aliases
-z4h source /usr/share/nvm/init-nvm.sh
 
 # Use additional Git repositories pulled in with `z4h install`.
 #

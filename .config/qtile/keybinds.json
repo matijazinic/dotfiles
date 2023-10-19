@@ -58,7 +58,7 @@
         },
         "": {
             "keybind": "[CTRL] + 3",
-            "command": "dropdown_toggle 'notifications'"
+            "command": "dropdown_toggle 'mixer'"
         },
         "Toggle Between Split And Unsplit Sides Of Stack": {
             "keybind": "[MOD] + [SHIFT] + Return",
@@ -90,7 +90,7 @@
         },
         "Spawn A Command Using A Prompt Widget": {
             "keybind": "[MOD] + r",
-            "command": "spawn 'rofi -show drun'"
+            "command": "function search"
         },
         "Show All Currently Open Windows": {
             "keybind": "[MOD] + w",
@@ -98,7 +98,7 @@
         },
         "Powermenu": {
             "keybind": "[MOD] + p",
-            "command": "spawn 'sh -c ~/.config/rofi/scripts/powermenu'"
+            "command": "function power"
         },
         "Theme_Switcher": {
             "keybind": "[MOD] + t",

@@ -15,6 +15,10 @@ def no_text(text):
     return ""
 
 
+def center(text):
+    return text.center(40)
+
+
 separator = widget.Sep(
     linewidth=2,
     padding=2,
@@ -55,6 +59,7 @@ default_widgets = [
         active=colors[2],
         inactive=colors[2],
         rounded=False,
+        hide_unused=True,
         highlight_color=colors[1],
         highlight_method="line",
         this_current_screen_border=colors[3],
@@ -114,36 +119,43 @@ default_widgets = [
     # widget.Image(
     #     filename="~/.config/qtile/Assets/4.png",
     # ),
-    # widget.WindowName(
-    #     background = '#202222',
-    #     format = "{name}",
-    #     font="JetBrains Mono Bold",
-    #     fontsize=13,
-    #     foreground='#607767',
-    #     empty_group_string = 'Desktop',
-    # ),
-    # widget.WindowTabs(
-    #     background=colors[0],
-    #     font="JetBrains Mono Bold",
-    #     fontsize=14,
-    #     foreground="#607767",
-    # ),
     widget.Spacer(
-        length=10,
+        length=20,
         background=colors[0],
     ),
-    widget.TaskList(
+    widget.WindowName(
         background=colors[0],
+        format="{name}",
         font="JetBrains Mono Bold",
         fontsize=14,
         foreground=colors[2],
-        max_title_width=0,  # bilo je 200
-        icon_size=24,
-        padding_y=6,
-        theme_mode="preferred",
-        parse_text=remove_excess_letters
-        # parse_text=no_text
+        empty_group_string="Desktop",
+        # parse_text=center,
     ),
+    # widget.WindowTabs(
+    #     background=colors[0],
+    #     font="JetBrains Mono",
+    #     fontsize=14,
+    #     foreground=colors[2],
+    #     # max_chars=0,
+    # ),
+    # widget.Spacer(
+    #     length=10,
+    #     background=colors[0],
+    # ),
+    # widget.TaskList(
+    #     background=colors[0],
+    #     font="JetBrains Mono Bold",
+    #     fontsize=14,
+    #     foreground=colors[2],
+    #     max_title_width=0,  # bilo je 200
+    #     icon_size=24,
+    #     padding_y=6,
+    #     theme_mode="preferred",
+    #     border=colors[2],
+    #     # parse_text=remove_excess_letters
+    #     parse_text=no_text,
+    # ),
     widget.Spacer(
         length=10,
         background=colors[0],

@@ -6,6 +6,8 @@ from defaults import mod, terminal
 from show_keys import show_keys
 from scratchpads import scratchpad_keys
 
+from scripts.rofi import power, search
+
 # █▄▀ █▀▀ █▄█ █▄▄ █ █▄░█ █▀▄ █▀
 # █░█ ██▄ ░█░ █▄█ █ █░▀█ █▄▀ ▄█
 
@@ -58,7 +60,7 @@ keys = [
     Key(
         [mod],
         "r",
-        lazy.spawn("rofi -show drun"),
+        search,
         desc="Spawn a command using a prompt widget",
     ),
     Key(
@@ -70,7 +72,7 @@ keys = [
     Key(
         [mod],
         "p",
-        lazy.spawn("sh -c ~/.config/rofi/scripts/powermenu"),
+        power,
         desc="powermenu",
     ),
     Key(

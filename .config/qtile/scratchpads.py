@@ -34,7 +34,7 @@ scratchpad_groups = [
             DropDown(
                 "notes",
                 terminal
-                + " -e "
+                + " -t notes -e "
                 + editor
                 + " "
                 + location
@@ -43,16 +43,16 @@ scratchpad_groups = [
                 x=0.595,
                 width=0.4,
                 height=0.6,
-                opacity=0.8,
+                opacity=0.9,
             ),
             DropDown(
                 "mixer",
-                "pavucontrol",
+                terminal + " -t pulsemixer -e pulsemixer",
                 x=0.695,
                 # y=0.1,
                 width=0.3,
                 height=0.4,
-                opacity=0.8,
+                opacity=0.9,
             ),
             DropDown(
                 "colorpick",
@@ -85,5 +85,5 @@ scratchpad_keys = [
         desc="Launch notes",
     ),
     Key(["control"], "2", lazy.group["scratchpad"].dropdown_toggle("colorpick")),
-    Key(["control"], "3", lazy.group["scratchpad"].dropdown_toggle("notifications")),
+    Key(["control"], "3", lazy.group["scratchpad"].dropdown_toggle("mixer")),
 ]

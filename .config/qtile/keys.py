@@ -61,7 +61,7 @@ keys = [
         [mod],
         "r",
         search,
-        desc="Spawn a command using a prompt widget",
+        desc="Application launcher",
     ),
     Key(
         [mod],
@@ -73,13 +73,19 @@ keys = [
         [mod],
         "p",
         power,
-        desc="powermenu",
+        desc="Power menu",
     ),
     Key(
         [mod],
         "t",
-        lazy.spawn("sh -c ~/.config/rofi/scripts/themes"),
-        desc="theme_switcher",
+        lazy.spawn("rofi -show run"),
+        desc="Launch terminal prompt",
+    ),
+    Key(
+        [mod],
+        "g",
+        lazy.spawn("rofi -show filebrowser"),
+        desc="Display file manager in rofi",
     ),
     # C U S T O M
     Key(

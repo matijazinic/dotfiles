@@ -4,7 +4,6 @@
 autorandr -c &
 
 # Start GNOME authentication agent
-/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 /usr/lib/mate-polkit/polkit-mate-authentication-agent-1 &
 
 # Start picom
@@ -32,3 +31,6 @@ alacritty &
 spotify &
 discord &
 thunderbird &
+
+# Set wallpapers
+# ~/.fehbg &

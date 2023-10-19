@@ -11,14 +11,18 @@ from scratchpads import scratchpad_groups
 groups = [
     Group("1", matches=[Match(wm_class=["firefox"])]),
     Group("2", matches=[Match(wm_class=["code-oss"])]),
-    Group("3", layout="columns", matches=[Match(wm_class=["Alacritty"])]),
+    Group(
+        "3",
+        layout="columns",
+        # matches=[Match(wm_class=["Alacritty"])]
+    ),
     Group("4"),
     Group("5", matches=[Match(wm_class=["thunderbird"])]),
     Group("6", matches=[Match(wm_class=["thunar"])]),
     Group("7"),
     Group(
         "8",
-        layout="max",
+        layout="columns",
         matches=[
             Match(wm_class=["Spotify"])
         ],  # There is a chance that spotify won't get automatically moved to correct tag, so we have a hook for that at the bottom of the file

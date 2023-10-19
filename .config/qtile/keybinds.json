@@ -88,7 +88,7 @@
             "keybind": "[MOD] + [CTRL] + q",
             "command": "shutdown "
         },
-        "Spawn A Command Using A Prompt Widget": {
+        "Application Launcher": {
             "keybind": "[MOD] + r",
             "command": "function search"
         },
@@ -96,13 +96,17 @@
             "keybind": "[MOD] + w",
             "command": "spawn 'rofi -show window'"
         },
-        "Powermenu": {
+        "Power Menu": {
             "keybind": "[MOD] + p",
             "command": "function power"
         },
-        "Theme_Switcher": {
+        "Launch Terminal Prompt": {
             "keybind": "[MOD] + t",
-            "command": "spawn 'sh -c ~/.config/rofi/scripts/themes'"
+            "command": "spawn 'rofi -show run'"
+        },
+        "Display File Manager In Rofi": {
+            "keybind": "[MOD] + g",
+            "command": "spawn 'rofi -show filebrowser'"
         },
         "File Manager": {
             "keybind": "[MOD] + e",

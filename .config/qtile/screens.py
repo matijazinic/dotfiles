@@ -186,24 +186,6 @@ screens = [
                     background=colors[0],
                 ),
                 separator,
-                # widget.Image(
-                #     filename="~/.config/qtile/Assets/3.png",
-                # ),
-                # widget.Net(),
-                # Spotify(),
-                widget.Spacer(
-                    length=8,
-                    background=colors[7],
-                ),
-                widget.Systray(
-                    background=colors[7],
-                    # fontsize=4,
-                ),
-                widget.Spacer(
-                    length=12,
-                    background=colors[7],
-                ),
-                separator,
                 # widget.TextBox(
                 #     text=" ",
                 #     background="#0F1212",
@@ -236,6 +218,24 @@ screens = [
                 widget.Spacer(
                     length=12,
                     background=colors[0],
+                ),
+                separator,
+                # widget.Image(
+                #     filename="~/.config/qtile/Assets/3.png",
+                # ),
+                # widget.Net(),
+                # Spotify(),
+                widget.Spacer(
+                    length=8,
+                    background=colors[7],
+                ),
+                widget.Systray(
+                    background=colors[7],
+                    # fontsize=4,
+                ),
+                widget.Spacer(
+                    length=12,
+                    background=colors[7],
                 ),
                 separator,
                 # widget.Image(
@@ -374,7 +374,7 @@ screens = [
                 widget.BatteryIcon(
                     theme_path="~/.config/qtile/Assets/Battery/",
                     background=colors[0],
-                    scale=1,
+                    scale=1.25,
                 ),
                 widget.Battery(
                     font="JetBrains Mono Bold",
@@ -521,7 +521,7 @@ screens = [
             margin=[0, 0, 10, 0],
             # margin = 0,
         ),
-        wallpaper="/home/matija/Pictures/wallpapers/night-desktop.jpg",
+        wallpaper="/home/matija/Pictures/wallpapers/Wallpapers/nord-arch-frost-logo.png",
         wallpaper_mode="fill",
     ),
     Screen(
@@ -991,7 +991,7 @@ screens = [
             margin=[0, 0, 10, 0],
             # margin = 0,
         ),
-        wallpaper="/home/matija/Pictures/wallpapers/night-desktop.jpg",
+        wallpaper="/home/matija/Pictures/wallpapers/Wallpapers/arch-neon.png",
         wallpaper_mode="fill",
     ),
 ]

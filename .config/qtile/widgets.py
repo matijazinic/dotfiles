@@ -340,9 +340,9 @@ default_widgets = [
         background=colors[0],
     ),
     widget.BatteryIcon(
-        theme_path="~/.config/qtile/Assets/Battery/",
+        # theme_path="~/.config/qtile/Assets/Battery/",
         background=colors[0],
-        scale=1,
+        # scale=1,
     ),
     widget.Battery(
         font="JetBrains Mono Bold",

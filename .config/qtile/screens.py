@@ -48,6 +48,8 @@ else:
     del default_widgets[33:37]
     display_widgets = default_widgets
 
+wallpaper_path = "/home/matija/dotfiles/Pictures/wallpapers"
+
 screens = [
     Screen(
         top=bar.Bar(
@@ -521,7 +523,7 @@ screens = [
             margin=[0, 0, 10, 0],
             # margin = 0,
         ),
-        wallpaper="/home/matija/Pictures/wallpapers/Wallpapers/nord-arch-frost-logo.png",
+        wallpaper=f"{wallpaper_path}/nord-arch-frost-logo.png",
         wallpaper_mode="fill",
     ),
     Screen(
@@ -991,7 +993,7 @@ screens = [
             margin=[0, 0, 10, 0],
             # margin = 0,
         ),
-        wallpaper="/home/matija/Pictures/wallpapers/Wallpapers/arch-neon.png",
+        wallpaper=wallpaper_path + "/" + "arch-neon.png",
         wallpaper_mode="fill",
     ),
 ]

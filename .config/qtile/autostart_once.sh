@@ -27,7 +27,7 @@ clipit &
 # Start often used apps
 wireguird &
 firefox &
-alacritty &
+# alacritty &
 spotify &
 discord &
 thunderbird &

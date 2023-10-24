@@ -195,7 +195,7 @@ screens = [
                 #     background="#202222",
                 # ),
                 widget.Spacer(
-                    length=8,
+                    length=4,
                     background=colors[0],
                 ),
                 widget.Image(

@@ -18,9 +18,9 @@ scratchpad_groups = [
             DropDown(
                 "khal",
                 terminal + " -t ikhal -e ikhal",
-                x=0.695,
-                width=0.3,
-                height=0.5,
+                x=0.545,
+                width=0.45,
+                height=0.6,
                 opacity=1,
             ),
             DropDown(

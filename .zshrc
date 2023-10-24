@@ -65,11 +65,13 @@ path=(~/bin $path)
 # Export environment variables.
 export GPG_TTY=$TTY
 export RANGER_LOAD_DEFAULT_RC=false
-export EDITOR=code-oss
+#export EDITOR=code-oss
+export EDITOR=micro
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh
 z4h source ~/.aliases
+z4h source /usr/share/nvm/init-nvm.sh
 
 # Use additional Git repositories pulled in with `z4h install`.
 #

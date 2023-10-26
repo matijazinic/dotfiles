@@ -1,26 +1,17 @@
 from libqtile import layout
 from libqtile.config import Match
-from colors import colors
+from defaults import colors
 
 # L A Y O U T S
 
+layout_defaults = {
+    "margin":10, "border_focus":colors[2], "border_normal":colors[0], "border_width":1
+}
+
 layouts = [
-    layout.Max(
-        border_focus="#1F1D2E",
-        border_normal="#1F1D2E",
-        margin=10,
-        # margin=[0,0,0,0],
-        border_width=0,
-    ),
-    layout.Columns(
-        margin=10, border_focus=colors[2], border_normal=colors[0], border_width=1
-    ),
-    layout.Floating(
-        border_focus="#1F1D2E",
-        border_normal="#1F1D2E",
-        margin=10,
-        border_width=0,
-    ),
+    layout.Max(**layout_defaults),
+    layout.Columns(**layout_defaults),
+    layout.Floating(**layout_defaults),
     # Try more layouts by unleashing below layouts
     #  layout.Stack(num_stacks=2),
     #  layout.Bsp(),
@@ -29,11 +20,7 @@ layouts = [
     #     margin=4,
     #     border_width=0,
     # ),
-    #  layout.MonadTall(	border_focus='#1F1D2E',
-    #     border_normal='#1F1D2E',
-    #     margin=4,
-    #     border_width=0,
-    # ),
+     layout.MonadTall(**layout_defaults),
     # layout.MonadWide(	border_focus='#1F1D2E',
     #     border_normal='#1F1D2E',
     #     margin=4,

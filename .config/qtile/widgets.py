@@ -4,6 +4,7 @@ from libqtile.lazy import lazy
 from defaults import colors
 from scripts.rofi import power, search
 
+
 def remove_excess_letters(text):
     for string in strings_to_exclude:
         text = text.replace(string, "")
@@ -78,7 +79,28 @@ def init_widgets():
             length=4,
             background=colors[0],
         ),
-        widget.Image(filename="~/.config/qtile/Assets/layout.png", background=colors[0]),
+        widget.Image(
+            filename="~/.config/qtile/Assets/Misc/chevron_left.png",
+            background=colors[0],
+            mouse_callbacks={"Button1": lazy.layout.previous()},
+        ),
+        widget.Image(
+            filename="~/.config/qtile/Assets/Misc/chevron_right.png",
+            background=colors[0],
+            mouse_callbacks={"Button1": lazy.layout.next()},
+        ),
+        widget.Spacer(
+            length=4,
+            background=colors[0],
+        ),
+        separator,
+        widget.Spacer(
+            length=4,
+            background=colors[0],
+        ),
+        widget.Image(
+            filename="~/.config/qtile/Assets/layout.png", background=colors[0]
+        ),
         widget.CurrentLayout(
             foreground=colors[2],
             background=colors[0],
@@ -123,15 +145,15 @@ def init_widgets():
             length=20,
             background=colors[0],
         ),
-        widget.WindowName(
-            background=colors[0],
-            format="{name}",
-            font="JetBrains Mono Bold",
-            fontsize=14,
-            foreground=colors[2],
-            empty_group_string="Desktop",
-            # parse_text=center,
-        ),
+        # widget.WindowName(
+        #     background=colors[0],
+        #     format="{name}",
+        #     font="JetBrains Mono Bold",
+        #     fontsize=14,
+        #     foreground=colors[2],
+        #     empty_group_string="Desktop",
+        # parse_text=center,
+        # ),
         # widget.WindowTabs(
         #     background=colors[0],
         #     font="JetBrains Mono",
@@ -143,19 +165,20 @@ def init_widgets():
         #     length=10,
         #     background=colors[0],
         # ),
-        # widget.TaskList(
-        #     background=colors[0],
-        #     font="JetBrains Mono Bold",
-        #     fontsize=14,
-        #     foreground=colors[2],
-        #     max_title_width=0,  # bilo je 200
-        #     icon_size=24,
-        #     padding_y=6,
-        #     theme_mode="preferred",
-        #     border=colors[2],
-        #     # parse_text=remove_excess_letters
-        #     parse_text=no_text,
-        # ),
+        widget.TaskList(
+            background=colors[0],
+            font="JetBrains Mono Bold",
+            fontsize=14,
+            foreground=colors[2],
+            max_title_width=0,  # bilo je 200
+            icon_size=24,
+            padding_y=6,
+            theme_mode="preferred",
+            theme_path="/usr/share/icons/Papirus-Dark",
+            border=colors[2],
+            parse_text=remove_excess_letters
+            # parse_text=no_text,
+        ),
         widget.Spacer(
             length=10,
             background=colors[0],
@@ -250,7 +273,9 @@ def init_widgets():
             background=colors[0],
             # scale=True,
             margin=8,
-            mouse_callbacks={"Button1": lazy.group["scratchpad"].dropdown_toggle("notes")},
+            mouse_callbacks={
+                "Button1": lazy.group["scratchpad"].dropdown_toggle("notes")
+            },
         ),
         widget.Spacer(
             length=4,
@@ -422,7 +447,9 @@ def init_widgets():
             step=5,
             background=colors[0],
             foreground=colors[2],
-            mouse_callbacks={"Button3": lazy.group["scratchpad"].dropdown_toggle("mixer")},
+            mouse_callbacks={
+                "Button3": lazy.group["scratchpad"].dropdown_toggle("mixer")
+            },
         ),
         widget.Spacer(
             length=4,
@@ -449,7 +476,9 @@ def init_widgets():
             foreground=colors[2],
             font="JetBrains Mono Bold",
             fontsize=13,
-            mouse_callbacks={"Button1": lazy.group["scratchpad"].dropdown_toggle("khal")},
+            mouse_callbacks={
+                "Button1": lazy.group["scratchpad"].dropdown_toggle("khal")
+            },
         ),
         # widget.Image(
         #     filename="~/.config/qtile/Assets/4-alt.png",
@@ -474,4 +503,4 @@ def init_widgets():
             background=colors[0],
         ),
     ]
-    return default_widgets  
+    return default_widgets

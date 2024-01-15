@@ -7,6 +7,7 @@ import os
 
 from scripts.rofi import power, search
 
+
 def remove_excess_letters(text):
     for string in strings_to_exclude:
         text = text.replace(string, "")
@@ -41,18 +42,21 @@ strings_to_exclude = [
 
 hostname = os.uname()[1]
 
+
 def init_main_screen():
     widgets_main = init_widgets()
     if hostname != "matija-legion5pro":
-        del widgets_main[33:37]
+        del widgets_main[38:42]
     return widgets_main
+
 
 def init_secondary_screen():
     widgets_secondary = init_widgets()
-    del widgets_secondary[16:21]
+    del widgets_secondary[21:26]
     if hostname != "matija-legion5pro":
-        del widgets_secondary[28:33]
+        del widgets_secondary[33:38]
     return widgets_secondary
+
 
 wallpaper_path = "/home/matija/dotfiles/Pictures/wallpapers"
 

@@ -5,7 +5,10 @@ from defaults import colors
 # L A Y O U T S
 
 layout_defaults = {
-    "margin":10, "border_focus":colors[2], "border_normal":colors[0], "border_width":1
+    "margin": 10,
+    "border_focus": colors[2],
+    "border_normal": colors[0],
+    "border_width": 1,
 }
 
 layouts = [
@@ -20,7 +23,7 @@ layouts = [
     #     margin=4,
     #     border_width=0,
     # ),
-     layout.MonadTall(**layout_defaults),
+    layout.MonadTall(**layout_defaults),
     # layout.MonadWide(	border_focus='#1F1D2E',
     #     border_normal='#1F1D2E',
     #     margin=4,
@@ -49,5 +52,6 @@ floating_layout = layout.Floating(
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
         Match(wm_class="file-roller"),  # Zip files
+        Match(wm_class="blueman-manager"),  # Bluetooth manager
     ],
 )

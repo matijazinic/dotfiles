@@ -28,7 +28,7 @@ groups = [
         ],  # There is a chance that spotify won't get automatically moved to correct tag, so we have a hook for that at the bottom of the file
     ),
     Group("9", layout="columns", matches=[Match(wm_class=["discord"])]),
-    Group("0", layout="columns"),
+    Group("0", layout="columns", matches=[Match(wm_class=["transmission-gtk"])]),
     Group("10", matches=[Match(wm_class=["RVGL"])]),
     # ScratchPad(
     #     "scratchpad",

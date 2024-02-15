@@ -34,3 +34,6 @@ thunderbird &
 
 # Set wallpapers
 # ~/.fehbg &
+
+xset -dpms &
+xset s off &

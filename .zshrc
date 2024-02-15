@@ -100,6 +100,21 @@ autoload -Uz zmv
 function md() { [[ $# == 1 ]] && mkdir -p -- "$1" && cd -- "$1" }
 compdef _directories md
 
+fs() {
+    if [ -z "$1" ]; then
+        echo "Usage: folder_size <folder_path> [num_items]"
+        return 1
+    fi
+
+    num_items=${2:-0}
+
+	if [ "$num_items" -gt 0 ]; then
+        du -sh "$1"/* | sort -hr | head -n "$num_items"
+    else
+        du -sh "$1"/* | sort -hr
+    fi
+}
+
 # Define named directories: ~w <=> Windows home directory on WSL.
 [[ -z $z4h_win_home ]] || hash -d w=$z4h_win_home
 

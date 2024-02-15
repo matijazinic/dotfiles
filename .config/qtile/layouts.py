@@ -53,5 +53,6 @@ floating_layout = layout.Floating(
         Match(title="pinentry"),  # GPG key password entry
         Match(wm_class="file-roller"),  # Zip files
         Match(wm_class="blueman-manager"),  # Bluetooth manager
+        Match(wm_class="wireguird"), # WireGuard client
     ],
 )

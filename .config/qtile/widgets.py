@@ -69,6 +69,7 @@ def init_widgets():
             other_screen_border=colors[0],
             foreground=colors[2],
             background=colors[0],
+            disable_drag=True,
         ),
         widget.Spacer(
             length=4,
@@ -176,7 +177,7 @@ def init_widgets():
             theme_mode="preferred",
             theme_path="/usr/share/icons/Papirus-Dark",
             border=colors[2],
-            parse_text=remove_excess_letters
+            parse_text=remove_excess_letters,
             # parse_text=no_text,
         ),
         widget.Spacer(

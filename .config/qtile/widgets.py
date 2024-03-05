@@ -3,6 +3,7 @@ from libqtile.config import Click, Drag, Group, Key, Match, hook, Screen, KeyCho
 from libqtile.lazy import lazy
 from defaults import colors
 from scripts.rofi import power, search
+from plugins.spotify import Spotify
 
 
 def remove_excess_letters(text):
@@ -142,8 +143,9 @@ def init_widgets():
         #     filename="~/.config/qtile/Assets/4.png",
         # ),
         widget.Spacer(
-            length=20,
+            length=100,
             background=colors[0],
+            # background="#00000000",
         ),
         # widget.WindowName(
         #     background=colors[0],
@@ -152,7 +154,7 @@ def init_widgets():
         #     fontsize=14,
         #     foreground=colors[2],
         #     empty_group_string="Desktop",
-        # parse_text=center,
+        #     parse_text=center,
         # ),
         # widget.WindowTabs(
         #     background=colors[0],
@@ -167,21 +169,23 @@ def init_widgets():
         # ),
         widget.TaskList(
             background=colors[0],
+            # background="#00000000",
             font="JetBrains Mono Bold",
             fontsize=14,
             foreground=colors[2],
             max_title_width=0,  # bilo je 200
             icon_size=24,
-            padding_y=6,
+            padding_y=9,
             theme_mode="preferred",
             theme_path="/usr/share/icons/Papirus-Dark",
             border=colors[2],
-            parse_text=remove_excess_letters
+            parse_text=remove_excess_letters,
             # parse_text=no_text,
         ),
         widget.Spacer(
-            length=10,
+            length=100,
             background=colors[0],
+            # background="#00000000",
         ),
         separator,
         # widget.Image(

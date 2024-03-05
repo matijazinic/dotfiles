@@ -3,6 +3,7 @@ from libqtile.config import Click, Drag, Group, Key, Match, hook, Screen, KeyCho
 from libqtile.lazy import lazy
 from defaults import colors
 from widgets import init_widgets
+from dpi import dpi
 import os
 
 from scripts.rofi import power, search
@@ -60,26 +61,29 @@ def init_secondary_screen():
 
 wallpaper_path = "/home/matija/dotfiles/Pictures/wallpapers"
 
+bar_height = int(dpi / 24 * 7)
+print(bar_height)
+
 screens = [
     Screen(
         top=bar.Bar(
             init_main_screen(),
-            42,
+            bar_height,
             border_color="#0F1212",
-            # background="#00000000",
+            background="#00000000",
             border_width=[0, 0, 0, 0],
             # margin = [15,60,6,60],
-            # margin=[10, 10, 6, 10],
-            margin=[0, 0, 10, 0],
+            margin=[10, 10, 0, 10],
+            # margin=[0, 0, 10, 0],
             # margin = 0,
         ),
-        wallpaper=f"{wallpaper_path}/nord-arch-frost-logo.png",
+        wallpaper=f"{wallpaper_path}/wallhaven-l8vp7y.jpg",
         wallpaper_mode="fill",
     ),
     Screen(
         top=bar.Bar(
             init_secondary_screen(),
-            42,
+            bar_height,
             border_color="#0F1212",
             # background="#00000000",
             border_width=[0, 0, 0, 0],

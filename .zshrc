@@ -67,6 +67,7 @@ export GPG_TTY=$TTY
 export RANGER_LOAD_DEFAULT_RC=false
 #export EDITOR=code-oss
 export EDITOR=micro
+export QT_FONT_DPI=120
 
 # Source additional local files if they exist.
 z4h source ~/.env.zsh

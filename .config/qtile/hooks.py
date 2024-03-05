@@ -17,8 +17,7 @@ def rearrange(window):
 
 @hook.subscribe.client_new
 def new_client(client):
-    items = ["gnome-calculator", "wireguird"]
-
+    items = ["gnome-calculator", "wireguird", "lxappearance"]
     for item in items:
         if item in client.get_wm_class():
             client.set_size_floating(800, 600)

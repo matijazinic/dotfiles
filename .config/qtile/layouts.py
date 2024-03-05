@@ -58,5 +58,6 @@ floating_layout = layout.Floating(
     no_reposition_rules=[
         Match(wm_class="wireguird"),  # WireGuard client
         Match(wm_class="gnome-calculator"),  # Calculator
+        Match(wm_class="lxappearance"),  # Customize look and feel
     ],
 )

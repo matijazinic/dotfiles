@@ -24,7 +24,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = (250, 500)
+    width = (250, 750)
 
     # The maximum height of a single notification, excluding the frame.
     height = 300
@@ -173,7 +173,7 @@
 	
     # Alignment of message text.
     # Possible values are "left", "center" and "right".
-    alignment = center
+    alignment = left
 
     # Vertical alignment of message text and icon.
     # Possible values are "top", "center" and "bottom".

@@ -279,7 +279,8 @@ def init_widgets():
             # scale=True,
             margin=8,
             mouse_callbacks={
-                "Button1": lazy.group["scratchpad"].dropdown_toggle("notes")
+                "Button1": lazy.group["scratchpad"].dropdown_toggle("notes"),
+                "Button4": lambda: qtile.cmd_spawn("dunstctl history-pop"),
             },
         ),
         widget.Spacer(

@@ -61,7 +61,7 @@ def init_secondary_screen():
 
 wallpaper_path = "/home/matija/dotfiles/Pictures/wallpapers"
 
-bar_height = int(dpi / 24 * 7)
+bar_height = int(dpi / 24 * 8)
 print(bar_height)
 
 screens = [

@@ -4,6 +4,7 @@ from libqtile.lazy import lazy
 from defaults import colors
 from scripts.rofi import power, search
 from plugins.spotify import Spotify
+from dpi import dpi
 
 
 def remove_excess_letters(text):
@@ -176,7 +177,7 @@ def init_widgets():
             foreground=colors[2],
             max_title_width=0,  # bilo je 200
             icon_size=24,
-            padding_y=9,
+            padding_y=int(dpi / 24),
             theme_mode="preferred",
             theme_path="/usr/share/icons/Papirus-Dark",
             border=colors[2],

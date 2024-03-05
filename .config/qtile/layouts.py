@@ -54,6 +54,7 @@ floating_layout = layout.Floating(
         Match(wm_class="file-roller"),  # Zip files
         Match(wm_class="blueman-manager"),  # Bluetooth manager
         Match(wm_class="flameshot"),  # Screenshot tool
+        Match(wm_class="transmission-gtk"),  # Ahoy matey!
     ],
     no_reposition_rules=[
         Match(wm_class="wireguird"),  # WireGuard client

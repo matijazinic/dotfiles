@@ -22,7 +22,8 @@ syncthing &
 nm-applet & # Network manager
 blueman-applet & # Bluetooth manager
 redshift &
-clipit &
+clipster -d &
+# clipit &
 
 # Start often used apps
 wireguird &

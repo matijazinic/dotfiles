@@ -113,7 +113,7 @@
             "command": "spawn 'thunar'"
         },
         "Clipboard": {
-            "keybind": "[MOD] + h",
+            "keybind": "[MOD] + c",
             "command": "spawn 'roficlip'"
         },
         "Screenshot": {

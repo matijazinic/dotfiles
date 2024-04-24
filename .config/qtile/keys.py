@@ -44,7 +44,7 @@ keys = [
     Key([mod, "shift"], "k", lazy.layout.grow_up(), desc="Grow window up"),
     Key([mod], "n", lazy.layout.normalize(), desc="Reset all window sizes"),
     Key([mod], "f", lazy.window.toggle_fullscreen()),
-    Key([mod], "c", lazy.window.toggle_floating()),
+    Key([mod], "x", lazy.window.toggle_floating()),
     Key(
         [mod, "shift"],
         "Return",
@@ -119,7 +119,7 @@ keys = [
         desc="brightness Down",
     ),
     Key([mod], "e", lazy.spawn("thunar"), desc="file manager"),
-    Key([mod], "h", lazy.spawn("roficlip"), desc="clipboard"),
+    Key([mod], "c", lazy.spawn("roficlip"), desc="clipboard"),
     Key([mod], "s", lazy.spawn("flameshot gui"), desc="Screenshot"),
     # Key(["control"], "1", lazy.group["scratchpad"].dropdown_toggle("mixer")),
     # Key(["control"], "2", lazy.group["scratchpad"].dropdown_toggle("colorpick")),

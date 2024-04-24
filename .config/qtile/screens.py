@@ -61,7 +61,7 @@ def init_secondary_screen():
 
 wallpaper_path = "/home/matija/dotfiles/Pictures/wallpapers"
 
-bar_height = int(dpi / 24 * 8)
+bar_height = int(dpi / 6 + 16)
 print(bar_height)
 
 screens = [
@@ -85,14 +85,14 @@ screens = [
             init_secondary_screen(),
             bar_height,
             border_color="#0F1212",
-            # background="#00000000",
+            background="#00000000",
             border_width=[0, 0, 0, 0],
             # margin = [15,60,6,60],
-            # margin=[10, 10, 6, 10],
-            margin=[0, 0, 10, 0],
+            margin=[10, 10, 0, 10],
+            # margin=[0, 0, 10, 0],
             # margin = 0,
         ),
-        wallpaper=wallpaper_path + "/" + "arch-neon.png",
+        wallpaper=wallpaper_path + "/" + "rock-monolith.jpg",
         wallpaper_mode="fill",
     ),
 ]
